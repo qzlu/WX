@@ -1,0 +1,39 @@
+/* pages/selectLock/selectLock.wxss */
+.header{
+  width: 100%;
+  padding: 10rpx;
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+.header icon{
+  position: absolute;
+  z-index: 100;
+  top: 26rpx;
+  left: 20rpx;
+}
+.header input{
+  /* border: 2rpx solid #ccc; */
+  width: 90%;
+  height: 70rpx;
+  padding-left:60rpx; 
+  border-radius: 10rpx;
+  background: #f6f6f6;
+  font-size: 36rpx
+}
+.main{
+  margin-top: 100rpx;
+}
+.lock-list{
+  width: 220rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  display: inline-block;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+}

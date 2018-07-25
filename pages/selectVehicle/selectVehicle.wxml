@@ -1,0 +1,17 @@
+<!--pages/selectVehicle/selectVehicel.wxml-->
+<view class='content'>
+      <view class='header'>
+            <icon type='search' size='20'></icon>
+            <input placeholder='请输入车牌号' bindinput='filter'></input>
+      </view>
+      <scroll-view class='main' scroll-y>
+            <view class='list' wx:for="{{filterVehicleList}}"  wx:key="{{item.FGUID}}" data-obj='{{item}}' bindtap='selectVehicle'>
+                  <view>
+                       <image class='vehicle-icon' src='/imgs/card.png'  mode="scaleToFill"></image>
+                  </view>
+                  <view class='text'>
+                      <text>{{item.FVehicleName}} \n {{item.FDriverName?item.FDriverName:"未绑定司机"}}  {{item.FPhoneNumber?item.FPhoneNumber:""}}</text>
+                  </view>                 
+            </view>
+      </scroll-view>
+</view>

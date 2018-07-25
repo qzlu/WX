@@ -1,0 +1,128 @@
+/* pages/map/map.wxss */
+.content{
+  padding: 20rpx 30rpx;
+}
+.input-list{
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 20rpx;
+}
+.input{
+  border: 1rpx solid #ccc;
+  border-radius: 4rpx;
+  width: 550rpx;
+  height: 70rpx;
+  display: inline-block;
+  box-sizing: border-box
+}
+.select-input{
+  border: 1rpx solid #ccc;
+  width: 480rpx;
+  height: 70rpx;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.select{
+  width: 70rpx;
+  height: 70rpx;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select_icon{
+  width: 0rpx;
+  height: 0rpx;
+  border: 20rpx solid;
+  border-color: #b3b3b3 transparent transparent transparent;
+  margin-top:20rpx;
+}
+.driverInput{
+  display:flex;
+  justify-content:space-between;
+  width: 550rpx;
+  box-sizing: border-box;
+}
+.driverName{
+  width: 200rpx;
+  height: 70rpx;
+  border: 1rpx solid #ccc;
+}
+.telephone{
+  width: 330rpx;
+  height: 70rpx;
+  border: 1rpx solid #ccc;
+}
+.carName{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  right: 80rpx;
+  top: 4rpx;
+  z-index: 1000
+}
+.code{
+   width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  z-index: 1000;
+  right: 40rpx
+}
+.imgContainer{
+  display: flex;
+  height: 200rpx;
+  border:2rpx solid #ccc;
+  padding: 40rpx 20rpx
+}
+.imgView{
+  width: 196rpx;
+  border: 2rpx solid #ccc;
+  margin-right: 24rpx;
+  height: 196rpx;
+  position: relative;
+}
+.img{
+  width: 196rpx;
+  height: 196rpx;
+}
+.takePhotoBtn{
+   width: 196rpx;
+   height: 196rpx;
+    border: 2rpx solid #ccc;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center
+}
+.del{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: white;
+  background: #999999;
+  position: absolute;
+  right: -16rpx;
+  top: -16rpx;
+  z-index: 1000
+}
+.submit{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0
+}
+.chooseImg{
+  width: 66rpx;
+  height: 56rpx;
+  margin-left: 60rpx;
+}
+.text{
+  font-size: 26rpx;
+  height: 30rpx;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,13 @@
+/**app.wxss**/
+@import "dist/index.wxss";
+page{
+  height: 100%
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+} 

@@ -1,0 +1,68 @@
+<!--pages/map/map.wxml-->
+<!-- 填写货物信息页面 -->
+<view class=" content">
+  <view class='input-list'>
+        货物简称
+        <input  type='text' maxlength="5" class='input'  name="userName" value="{{goodsInfo.goodsName}}" bindinput="getGoodsName"></input>
+  </view>
+  <view class='input-list'>
+        车牌号
+        <view style='display:flex'>
+          <input  type='text' maxlength="8" class='select-input ' value="{{goodsInfo.vehicleName}}"  bindinput='getVehicleName'></input>
+          <navigator url="../selectVehicle/selectVehicle" open-type="navigate">
+              <view class='select'  >
+                  <view class='select_icon'></view>
+              </view>
+          </navigator>
+        </view>
+  </view>
+    <view class='input-list'>
+        电子锁ID<text style='color:red'>*</text>
+        <view style='display:flex;position:relative'>
+          <input  type='text' maxlength="10" class='select-input' placeholder="必填项" value='{{goodsInfo.lockId}}' bindinput='getLockId'></input>
+           <image  class='carName' src='/imgs/scan.png' bindtap='scanCode'></image>
+           <navigator url="../selectLock/selectLock" open-type="navigate">
+              <view class='select'>
+                <view class='select_icon'></view>
+              </view>          
+           </navigator>
+        </view>
+  </view>
+    <view class='input-list' style='positon:relative'>
+        订单号
+        <input  type='text' maxlength="12" class='input' value="{{goodsInfo.code}}"  bindinput='getCode'></input>
+          <image  class='code' src='/imgs/scan.png' bindtap='scanGetCode'></image>
+  </view>
+    <view class='input-list'>
+        始发地
+        <input  type='text' maxlength="25" class='input' bindfocus="chosePosition" value='{{goodsInfo.address}}'></input>
+  </view>
+    <view class='input-list'>
+        司机
+        <view  class='driverInput'>
+          <input  type='text' maxlength="10" class='driverName' placeholder="姓名" value="{{goodsInfo.driverName}}"  bindinput='getDriverName'></input>
+          <input  type='text' maxlength="11" class='telephone' placeholder="手机号码" value="{{goodsInfo.driverTel}}" bindinput='getDriverTel'></input>
+          <!-- <image  class='code' src='/imgs/scan.png' bindtap='getPhone'></image> -->
+        </view>
+  </view>
+    <view class='input-list'>
+        承运商
+        <input  type='text' maxlength="10" class='input' value="{{goodsInfo.carrier}}" bindinput='getCarrier'></input>
+  </view>
+  <view class='imgContainer'>
+    <view wx:for="{{goodsInfo.imgArr}}" class='imgView'>
+        <view class='del' bindtap='delImg' data-url='{{item}}'>x</view>
+       <image src='{{item}}' mode="scaleToFill" class='img'  bindtap='imgDedail' data-url='{{item}}'></image> 
+    </view>
+     <view  class='takePhotoBtn' bindtap="takePhoto" wx:if="{{goodsInfo.imgArr.length<3||!goodsInfo.imgArr}}">
+      <image class='chooseImg' mode="scaleToFill" src='/imgs/takePhoto.png'></image>
+      <view class='text'>
+        <text wx:if="{{goodsInfo.imgArr.length>0}}">{{goodsInfo.imgArr.length}}/3</text>
+        <text wx:else>选择照片</text>
+      </view>
+    </view> 
+  </view>
+     <button style='margin-top:20rpx;background:#529add;' bindtap='submit'>
+          确定
+  </button>
+</view>

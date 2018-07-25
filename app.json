@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/map/map",
+    "pages/detail/img",
+    "pages/site/site",
+    "pages/addSite/addSite",
+    "pages/selectVehicle/selectVehicle",
+    "pages/selectLock/selectLock"
+  ],
+  "tabBar": {
+    "selectedColor": "#005fc6",
+    "list": [
+      {
+        "iconPath": "imgs/icon_open_1.png",
+        "selectedIconPath": "imgs/icon_open_2.png",
+        "pagePath": "pages/index/index",
+        "text": "扫码开锁"
+      },
+      {
+        "iconPath": "imgs/icon_send_1.png",
+        "selectedIconPath": "imgs/icon_send_2.png",
+        "pagePath": "pages/logs/logs",
+        "text": "扫码发货"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "扫码开锁",
+    "navigationBarTextStyle": "black"
+  }
+}

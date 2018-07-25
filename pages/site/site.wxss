@@ -1,0 +1,98 @@
+/* pages/site/site.wxss */
+.header{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #ccc;
+  z-index: 1000
+}
+.selectHead{
+  height: 50rpx;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.siteList{
+padding-bottom: 90rpx;
+}
+.list{
+  height: 140rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  background: white;
+  align-items: center;
+  font-size: 30rpx;
+}
+/* .list-title{
+  display: inline-block;
+  width: 150rpx;
+  text-align: justify
+} */
+.selectBtn{
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  background: white;
+  font-size: 30rpx;
+  padding: 0rpx;
+  margin: 0rpx;
+  color: #529add;
+}
+.address{
+  width: 600rpx;
+  height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+.selectConten{
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  justify-content:flex-start;
+}
+.selectList{
+  width: 20%;
+  height: 120rpx;
+  margin: 17rpx;
+  /* border: 1rpx solid #e49525; */
+  font-size: 30rpx;
+  /* border-radius: 8rpx; */
+  text-align: center;
+}
+.selectList-content{
+  border: 1rpx solid #e49525;
+  border-radius: 8rpx;
+}
+.siteHead{
+background: #e49525;
+text-align: center;
+height: 42rpx;
+position: relative
+}
+.close{
+  position: absolute;
+  top: -26rpx;
+  right: -26rpx;
+  z-index: 100
+}
+.siteBody{
+  line-height: 80rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+.footer{
+  position: fixed;
+  display:flex;
+  bottom: 0;
+  width: 100%;
+}
+.footer button{
+  width: 50%;
+  border-radius: 0
+}
+ .mainmove{position: absolute; opacity: 0.7;width: 20%}
+.mainend{position: static; opacity: 1;} 

@@ -1,0 +1,28 @@
+<!--pages/addSite/addSite.wxml-->
+<!-- 添加站点页面 -->
+<view class='content'>
+  <view class='input-list'>
+        站点名称<text style='color:red'>*</text>
+        <input  type='text' maxlength="5" class='input'   value=""                             bindinput="getSiteName"></input>
+  </view>
+  <view class='errorText' wx:if="{{!siteName}}">站点名称不能为空</view>
+    <view class='input-list'>
+        姓名       <text style='color:red'>*</text>
+        <input  type='text' maxlength="10" class='input'   value=""   bindinput="getName"></input>
+  </view>
+  <view class='errorText' wx:if="{{!name}}">姓名不能为空</view>
+    <view class='input-list'>
+        手机号<text style='color:red'>*</text>
+        <input  type='text' maxlength="11" class='input'   value=""                             bindinput="getTelphone"></input>
+    </view>
+    <view class='errorText' wx:if="{{!telNumber}}">手机号不能为空</view>
+     <view class='errorText' wx:if="{{!telNumberIsTrue}}">您输入的手机号不正确</view>
+    <view class='input-list'>
+        收货地址<text style='color:red'>*</text>
+        <input  type='text' maxlength="25" class='input'  value="{{address}}"                             bindfocus="getAddress"></input>
+    </view>
+    <view class='errorText' wx:if="{{!address}}">收货地址不能为空</view>
+    <button style='margin-top:20rpx;background:#529add;' bindtap='addSite'>
+          保存
+    </button>
+</view>

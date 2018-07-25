@@ -1,0 +1,45 @@
+/* pages/selectVehicle/selectVehicel.wxss */
+.header{
+  width: 100%;
+  padding: 10rpx;
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+.header icon{
+  position: absolute;
+  z-index: 100;
+  top: 26rpx;
+  left: 20rpx;
+}
+.header input{
+  /* border: 2rpx solid #ccc; */
+  width: 90%;
+  height: 70rpx;
+  padding-left:60rpx; 
+  border-radius: 10rpx;
+  background: #f6f6f6;
+  font-size: 36rpx
+}
+.main{
+  margin-top: 100rpx;
+}
+.list{
+  height: 100rpx;
+  font-size:30rpx;
+  display: flex;
+  padding-left: 20rpx;
+}
+.list:nth-child(odd){
+  background: #f6f6f6;
+}
+.vehicle-icon{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+.text{
+  margin-top:10rpx;
+  margin-left: 20rpx;
+}

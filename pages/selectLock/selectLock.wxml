@@ -1,0 +1,11 @@
+<view class='content'>
+      <view class='header'>
+            <icon type='search' size='20'></icon>
+            <input placeholder='请输入电子锁ID' bindinput='filter'></input>
+      </view>
+      <scroll-view class='main' scroll-y>
+        <view class='lock-list' wx:for="{{filterLockList}}" wx:key="{{item.FGUID}}" data-lockid="{{item.FAssetID}}" bindtap='selectLock'>
+          {{item.FAssetID}}
+        </view>
+      </scroll-view>
+</view>

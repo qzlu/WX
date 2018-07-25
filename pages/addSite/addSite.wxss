@@ -1,0 +1,25 @@
+/* pages/addSite/addSite.wxss */
+.content{
+  padding: 20rpx 30rpx;
+}
+.input-list{
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 20rpx;
+}
+.input{
+  border: 1rpx solid #ccc;
+  border-radius: 4rpx;
+  width: 550rpx;
+  height: 70rpx;
+  display: inline-block;
+  box-sizing: border-box
+}
+.errorText{
+  font-size: 24rpx;
+  color: red;
+  margin-top: -10rpx;
+  text-align: right
+}

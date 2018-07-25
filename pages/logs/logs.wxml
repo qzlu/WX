@@ -1,0 +1,64 @@
+<!--logs.wxml-->
+<!-- 扫码开锁页面 -->
+<import src="/dist/steps/index.wxml" />
+<view class="container log-list">
+  <view class='head'>
+    <block >
+        <navigator url="../map/map" class="navigator"  hover-class="navigator-hover" >
+            <view class='icon icon_send'>发</view>
+             <view class="navigator-text" wx:if="{{goodsInfo.lockId===''||!goodsInfo.lockId}}">填写货物信息</view> 
+             <view class='navigator-text' wx:if="{{goodsInfo.lockId!==''&&goodsInfo.lockId}}">
+              <view class="thumb">
+                <image class="thumb-img"
+                  src="{{goodsInfo.imgArr[0]?goodsInfo.imgArr[0]:'/imgs/nullImg.png'}}"
+                  mode="scaleToFill"
+                ></image>
+              </view>
+              <view class="detail">
+                <view class="detail-row">
+                  <view class="">
+                    订单号：{{goodsInfo.code}}
+                  </view>
+                </view>
+                <view class="detail-row">
+                  <view class="">
+                    电子锁ID：{{goodsInfo.lockId}}
+                  </view>
+                </view>
+                <view class="detail-row">
+                  <view class="">车牌：{{goodsInfo.vehicleName}}</view>
+                </view>
+              </view>
+            </view> 
+            <view class="navigator-arrow"></view>
+        </navigator>
+    </block>
+      <block >
+        <navigator url="../site/site" class="navigator"  hover-class="navigator-hover" >
+            <view class='icon icon_receive'>收</view>
+            <view class="navigator-text" wx:if="{{steps.length}}">已选中{{steps.length}}个站点</view>
+            <view class="navigator-text" wx:else>填写站点信息</view>
+            <view class="navigator-arrow"></view>
+        </navigator>
+    </block>
+  </view>
+    <scroll-view class='site' scroll-y>
+      <view class='steps'>
+          <view class='step' wx:for="{{steps}}" wx:key="{{item.FGUID}}">
+              <view class='closeIcon {{index%2===0?"closeIcon-odd":""}}  {{index%2===1?"closeIcon-even":""}}'                             bindtap='delSite' data-site="{{item}}"><icon type="clear" size="20" color="#999999"/></view>
+              <view class='siteIcon'>{{index+1}}</view>
+              <view class='siteName {{index%2===0?"siteName-odd":""}}  {{index%2===1?"siteName-even":""}}'>
+                    <view style='' class='stepIcon'>
+                      <view class='storeName'> {{item.FStoreName}}</view>
+                      <view class='triangle'></view>
+                    </view>
+                    <view class='user'>{{item.FUserName}}{{item.FTelephone}}</view>              
+               </view>
+              <view class='line' wx:if="{{index!==steps.length-1}}"></view>
+          </view>
+      </view>
+    </scroll-view>
+  <button class='footer' bindtap='send' disabled="{{isSending}}">
+    现在发货
+  </button>
+</view>

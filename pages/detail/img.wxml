@@ -1,0 +1,11 @@
+<!--pages/detail/img.wxml-->
+<!-- 图片详情页面 -->
+<view style='height:1000rpx'>
+  <swiper style='height:100%'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" mode="widthFix" class="slide-image" style='width:750rpx;height:100%'/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

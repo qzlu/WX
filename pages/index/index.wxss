@@ -1,0 +1,8 @@
+/**index.wxss**/
+.logo{
+  width: 324rpx;
+  margin-bottom: 140rpx
+}
+.openlocl-img{
+  width: 500rpx
+}

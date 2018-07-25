@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<!-- 扫码开锁页面 -->
+<view class="container">
+      <image src='/imgs/logo.png'  mode="widthFix" class='logo'></image>
+      <image src='{{src}}' bindtap="openLock" class='openlocl-img' mode="widthFix"></image>
+      <modal hidden="{{hideBindModal}}" title="请绑定账号" confirm-text="提交" cancel-text="取消" bindcancel="cancel"                           bindconfirm="confirm">  
+          <input type='text'placeholder="用户名" style='background:#ccc;padding:20rpx;color:black' bindinput='getUser'/>
+          <input type='password'placeholder="密码" style='background:#ccc;margin-top:20rpx;padding:20rpx;color:black' bindinput='getPsd'/>    
+      </modal>  
+</view>

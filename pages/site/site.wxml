@@ -1,0 +1,35 @@
+<!--pages/site/site.wxml-->
+<!-- 选择站点页面 -->
+<view style='background: #f5f5f5;height:100%;' >
+  <view class='header'>
+      <view class='selectHead'>已选站点（最多10个）</view>
+      <view class='selectConten'  >
+        <view wx:for="{{checkSite}}" class='selectList'>
+                  <view  class="selectList-content {{mainx===index? 'mainmove':'mainend'}}" wx:key="{{item.FGUID}}" animation="{{animationData}}"       bindtap='delSite' data-site="{{item}}" data-index="{{index}}" bindtouchmove="move" bindtouchstart="movestart" bindtouchend="moveend" style="left:{{start.x}}px; top:{{start.y}}px;">
+                        <view class='siteHead'>{{index+1}}
+                            <icon hidden='{{!timer}}' class="close" type="clear" size="20" color="#999999"data-site="{{item}}" bindtap='delSite' />
+                        </view>
+                        <view class='siteBody'> {{item.FStoreName}}</view>
+                    </view>
+                  </view>    
+        </view>
+      <view class='selectHead'>待选站点（{{siteArr.length}}个）</view> 
+  </view> 
+      <scroll-view class='siteList' scroll-y style='margin-top:{{top}}'>
+          <view wx:for="{{siteArr}}" class='list'  wx:key="{{item.FGUID}}" >
+            <view class='siteInfo' >
+              <view>
+                <text>门店名称：{{item.FStoreName}}</text>
+              </view>
+              <view>
+                  <text space="ensp">收 货 人：{{item.FUserName}}{{item.FTelephone}}</text>
+              </view> 
+              <view class='address'>
+                  <nobr><text space="ensp">地    址：{{item.FAddress}}</text></nobr>
+              </view>
+            </view>
+            <button class='selectBtn' bindtap='select' data-obj='{{item}}'>选择</button>
+          </view>
+      </scroll-view>
+      <view class='footer'><button style='background:#e49525' bindtap="addSite">新增</button><button                 style='background:#529add' bindtap='submit'>确定</button></view>
+</view>
